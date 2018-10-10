@@ -9,14 +9,23 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <title></title>
         <style>
-            * {
-      font-family: sans-serif;
-      font-size: 16px; 
-      line-height: 1.5;
-    }
+     * {
+        font-family: sans-serif;
+        font-size: 16px; 
+        line-height: 1.5;
+        }
+     div {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+        margin: auto;
+        padding-left: 150px;
+        }
+        
         </style>
     </head>
     <body>
+        <div>
         <?php
         $watestdb = new PDO('mysql:host=127.0.0.1:8889;dbname=PersonRegister', 'WATestUser1', 'WATestPwd1');
         print "Person's name: ".htmlspecialchars($_POST["name"]).". <BR>"; // Job title: ".htmlspecialchars($_POST["title"]).". Working dates: ".htmlspecialchars($_POST["startdate"])." - ".htmlspecialchars($_POST["enddate"])." - ";
@@ -88,7 +97,8 @@ and open the template in the editor.
         $insert=NULL;
 
 
-
+        
         ?>
+            </div>
     </body>
 </html>
